@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
 import kr.ac.wku.librarypractice_20231029.databinding.ActivityMainBinding
@@ -74,6 +75,12 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+
+//        화면이 켜지면 바로 이미지 불러내기 (웹상 이미지)
+
+        Glide.with(this).load("https://cdn.eyesmag.com/content/uploads/posts/2022/02/18/best-league-of-legends-pro-players-talents-faker-5ed3885c-c34f-4a86-bff6-5396ae3258dd.jpg").into(binding.imgThumbnail)
+
 
     }
 }
